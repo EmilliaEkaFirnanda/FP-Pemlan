@@ -1,8 +1,0 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-int main(){
-  printf("Welcome to my final project");
-  printf("Welcome juga");
-  return 0
- }
