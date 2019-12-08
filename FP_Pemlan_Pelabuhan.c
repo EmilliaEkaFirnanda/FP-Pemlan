@@ -34,8 +34,8 @@ void bismillah(){
 	printf("\n\t\t\t ‹‹‹\t\t\t\t\t\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t\tWELCOME TO OUR FINAL PROJECT\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t\t\t\t\t\t\t‹‹‹");
-	printf("\n\t\t\t ‹‹‹\t - RAHMAT AULIYA	<180801010025>\t\t‹‹‹");
-	printf("\n\t\t\t ‹‹‹\t - EMILLIA EKA FIRNANDA	<180801010026>\t\t‹‹‹");
+	printf("\n\t\t\t ‹‹‹\t - RAHMAT AULIYA	<18081010027>\t\t‹‹‹");
+	printf("\n\t\t\t ‹‹‹\t - EMILLIA EKA FIRNANDA	<18081010026>\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t\t\t\t\t\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t\t\t GOOD LUCK :) \t\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t\t\t\t\t\t\t‹‹‹");
@@ -137,11 +137,33 @@ int linear_search_update(pel data[], int n, char cari[]) {
         if (!strcmp(cari, data[i].ken.nopol)) 
             return i;
     return -1; 
-}
+} 
 
-//disini isien rekursifnya linear search selanjutnya.
+int linear_search_nopol(pel data[], int n, char cari[]) { 
+    int i; 
+    for (i=0;i<n;i++) 
+        if (!strcmp(cari, data[i].ken.nopol)) 
+            return i;
+    return -1; 
+} 
 
+int linear_search_tiket(pel data[], int n, int cari) { 
+    int i;
+    for (i=0;i<n;i++) 
+        if (data[i].nomor_tiket == cari) {
+            return i;
+		}
+	return -1;
+} 
 
+int linear_search_bobot(pel data[], int n, int cari) { 
+    int i; 
+    for (i=0;i<n;i++) 
+        if (data[i].ken.bobot == cari) {
+			return i;
+		}
+	return -1;
+} 
 
 /*---SHELL SORT------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -286,24 +308,117 @@ int main() {
 			system("cls");
 		}
 		else if(menu==4){
-			do{
+	do{
 				system("cls");
 				pilihan_search();
 				if(search==1){
-				// ini search nopol
+					char cari_nopol[100];
+					system("cls");
+					printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ SEARCH DATA KENDARAAN  ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹\n");
+					printf(" ====================  (Berdasarkan Nopol)   ====================\n\n");
+					printf(" Masukkan Nopol Kendaraan yang dicari : "); fflush(stdin); gets(cari_nopol);
+	
+					int x;
+					x=linear_search_nopol(data,n,cari_nopol);
 					
+					if(x==-1){
+						printf("\n DATA KENDARAAN TIDAK DITEMUKAN\n");
+					}else{
+						view(x);
+					}
+
+//					i=0;
+//					found=false;
+//					while(i<=n && n!=NULL){
+//						if(!strcmp(cari_nopol, data[i].ken.nopol)){
+//							view(i);
+//							found=true;
+//							i++;
+//						}else{
+//							i++;
+//						}
+//					}
+//					if (found!=true){
+//						printf("\n DATA KENDARAAN TIDAK DITEMUKAN\n");
+//					}
+			
+					getch();
+					system("cls");
 				}
 				else if(search==2){
-				// ini search nomor tiket
+					int cari_tiket;
+			
+					system("cls");
+					printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ SEARCH DATA KENDARAAN  ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹\n");
+					printf(" ================== (Berdasarkan Nomor Tiket) ===================\n\n");
+					printf(" Masukkan Nomor Tiket Kendaraan yang dicari : "); fflush(stdin); scanf("%d",&cari_tiket);
+			
+					int z;
+					z=linear_search_tiket(data,n,cari_tiket);
 					
+					if(z==-1){
+						printf("\n DATA KENDARAAN TIDAK DITEMUKAN\n");
+					}else{
+						view(z);
+					}
+					
+//					i=0;
+//					found=false;
+//					while(i<=n && !found){
+//						if(cari_tiket==data[i].nomor_tiket){
+//							found=true;
+//						}else{
+//						i++;
+//						}
+//					}
+//					if (found==true){	
+//						view(i);
+//					}else{
+//						printf("\n DATA KENDARAAN TIDAK DITEMUKAN\n");
+//					}
+			
+					getch();
+					system("cls");
 				}
 				else if(search==3){
-				// ini search bobot
+					int cari_bobot;
+			
+					system("cls");
+					printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ SEARCH DATA KENDARAAN  ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹\n");
+					printf(" ================ (Berdasarkan Bobot Kendaraan) =================\n\n");
+					printf(" Masukkan Bobot Kendaraan yang dicari : "); fflush(stdin); scanf("%d",&cari_bobot);
+			
+					int y;
+					y=linear_search_bobot(data,n,cari_bobot);
+					
+					if(y==-1){
+						printf("\n DATA KENDARAAN TIDAK DITEMUKAN\n");
+					}else{
+						view(y);
+						y++;
+					}
+					
+//					i=0;
+//					found=false;
+//					while(i<=n && n!=NULL){
+//						if(cari_bobot==data[i].ken.bobot){
+//							view(i);
+//							found=true;
+//							i++;
+//						}else{
+//							i++;
+//						}
+//					}
+//					if (found!=true){
+//						printf("\n DATA KENDARAAN TIDAK DITEMUKAN\n");
+//					} 
+//			
+					getch();
+					system("cls");
 
 				}
 			}while(search!=4);
-		}
-		else if(menu==5){
+		}		else if(menu==5){
 			do{
 				system("cls");
 				pilihan_sort();
