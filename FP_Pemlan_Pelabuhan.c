@@ -34,8 +34,8 @@ void bismillah(){
 	printf("\n\t\t\t ‹‹‹\t\t\t\t\t\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t\tWELCOME TO OUR FINAL PROJECT\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t\t\t\t\t\t\t‹‹‹");
-	printf("\n\t\t\t ‹‹‹\t - RAHMAT AULIYA	<18081010027>\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t - EMILLIA EKA FIRNANDA	<18081010026>\t\t‹‹‹");
+	printf("\n\t\t\t ‹‹‹\t - RAHMAT AULIYA	<18081010027>\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t\t\t\t\t\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t\t\t GOOD LUCK :) \t\t\t‹‹‹");
 	printf("\n\t\t\t ‹‹‹\t\t\t\t\t\t\t‹‹‹");
@@ -120,13 +120,63 @@ void view(int i){
 }
 
 void update(int i){
-	printf(" Ubah Jenis Kendaraan ke-%d		: ",i+1); fflush(stdin); gets(data[i].ken.jenis);
-	printf(" Ubah Bobot Kendaraan ke-%d		: ",i+1); fflush(stdin); scanf("%d",&data[i].ken.bobot);
-	printf(" Ubah Tujuan Pelabuhan ke-%d		: ",i+1); fflush(stdin); gets(data[i].tujuan);
-	printf(" Ubah Nomor Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].nomor_tiket);
-	printf(" Ubah Tanggal Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.tanggal);
-	printf(" Ubah Bulan Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.bulan);
-	printf(" Masukkan Tahun Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.tahun);
+	int ubah;
+	do{
+		printf("\n ________________________________________________________________________________________________");
+		printf("\n |\t\t\t\t == KETERSEDIAAN DATA ==\t\t\t\t\t|");
+		printf("\n |\t\t\t\t\t\t\t\t\t\t\t\t|");
+		printf("\n | 1.Nopol Kendaraan \t 3.Bobot Kendaraan \t 5.Nomor Tiket \t\t7.Update Selesai\t|");
+		printf("\n | 2.Jenis Kendaraan \t 4.Tujuan Pelabuhan \t 6.Tanggal Tiket\t\t\t\t|");
+		printf("\n |______________________________________________________________________________________________|\n");
+		printf("\n Data apa yang ingin di-ubah 	: "); fflush(stdin); scanf("%d",&ubah);
+		if(ubah==1){
+			printf("\n Ubah Nopol Kendaraan ke-%d	: ",i+1); fflush(stdin); gets(data[i].ken.nopol);
+			system("cls");
+			printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ UPDATE DATA KENDARAAN ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹\n\n");
+			view(i);
+		}else if(ubah==2){
+			printf("\n Ubah Jenis Kendaraan ke-%d	: ",i+1); fflush(stdin); gets(data[i].ken.jenis);
+			system("cls");
+			printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ UPDATE DATA KENDARAAN ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹\n\n");
+			view(i);
+		}else if(ubah==3){
+			printf("\n Ubah Bobot Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].ken.bobot);	
+			system("cls");
+			printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ UPDATE DATA KENDARAAN ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹\n\n");
+			view(i);
+		}else if(ubah==4){
+			printf("\n ________________________________________________");
+			printf("\n |\t == Tujuan yang tersedia ==\t\t|");
+			printf("\n |\t\t\t\t\t\t|");
+			printf("\n | -Ketapang \t -Padang Bai \t\t\t|");
+			printf("\n | -Lembar \t -Tanjung Perak\t\t\t|");
+			printf("\n |______________________________________________|\n");
+			do{
+				printf(" \n Ubah Tujuan Pelabuhan ke-%d	: ",i+1); fflush(stdin); gets(data[i].tujuan);
+				system("cls");
+				printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ UPDATE DATA KENDARAAN ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹\n\n");
+				view(i);	
+			}while(((strcmp(data[i].tujuan,("Ketapang"))&&strcmp(data[i].tujuan,("Padang Bai"))&&strcmp(data[i].tujuan,("Lembar"))&&strcmp(data[i].tujuan,("Tanjung Perak")))));
+		}else if(ubah==5){
+			printf("\n Ubah Nomor Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].nomor_tiket);	
+			system("cls");
+			printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ UPDATE DATA KENDARAAN ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹\n\n");
+			view(i);
+		}else if(ubah==6){
+			do{
+				printf("\n Ubah Tanggal Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.tanggal);
+			}while(data[i].tgl.tanggal<1 || data[i].tgl.tanggal>31);
+			do{
+				printf("\n Ubah Bulan[1-12] Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.bulan);
+			}while(data[i].tgl.bulan<1 || data[i].tgl.bulan>12);
+			do{
+				printf("\n Ubah Tahun Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.tahun);	
+			}while(data[i].tgl.tahun<2018);
+			system("cls");
+			printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ UPDATE DATA KENDARAAN ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹\n\n");
+			view(i);
+		}
+	}while(ubah!=7);
 }
 
 /*---LINEAR SEARCH------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -275,6 +325,7 @@ int main() {
 			printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ INPUT DATA KENDARAAN ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ \n\n");
 			input(n);
 			n++;
+			printf("\n\n\t ---< DATA BERHASIL DITAMBAHKAN >---\n\n");
 			getch();
 			system("cls");
 		}
@@ -282,11 +333,12 @@ int main() {
 			system("cls");
 			printf("\n ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ VIEW DATA KENDARAAN ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹ \n");
 			if(n==0){
-				printf("\n Input Data Kendaraan Terlebih Dahulu!!!");
+				printf("\n\n\t ---< SILAHKAN INPUT DATA TERLEBIH DAHULU ! >---\n\n");
 			}else{
 				for(i=0;i<n;i++){
 					view(i);
 				}
+				printf("\n\n\t ---< DATA BERHASIL DITAMPILKAN >---\n\n");
 			}
 			getch();
 			system("cls");
@@ -300,9 +352,11 @@ int main() {
 			int w;
 			w=linear_search_update(data,n,cari_update);
 			if(w==-1){
-				printf("\n DATA KENDARAAN TIDAK DITEMUKAN\n");
+				printf("\n\n\t ---< DATA KENDARAAN TIDAK DITEMUKAN >---\n\n");
 			}else{
+				view(w);
 				update(w);
+				printf("\n\n\t ---< DATA BERHASIL DI-UPDATE >---\n\n");
 			}
 			getch();
 			system("cls");
@@ -322,9 +376,10 @@ int main() {
 					x=linear_search_nopol(data,n,cari_nopol);
 					
 					if(x==-1){
-						printf("\n DATA KENDARAAN TIDAK DITEMUKAN\n");
+						printf("\n\n\t ---< DATA KENDARAAN TIDAK DITEMUKAN >---\n\n");
 					}else{
 						view(x);
+						printf("\n\n\t ---< DATA KENDARAAN DITEMUKAN >---\n\n");
 					}
 
 //					i=0;
@@ -357,9 +412,10 @@ int main() {
 					z=linear_search_tiket(data,n,cari_tiket);
 					
 					if(z==-1){
-						printf("\n DATA KENDARAAN TIDAK DITEMUKAN\n");
+						printf("\n\n\t ---< DATA KENDARAAN TIDAK DITEMUKAN >---\n\n");
 					}else{
 						view(z);
+						printf("\n\n\t ---< DATA KENDARAAN DITEMUKAN >---\n\n");
 					}
 					
 //					i=0;
@@ -392,10 +448,11 @@ int main() {
 					y=linear_search_bobot(data,n,cari_bobot);
 					
 					if(y==-1){
-						printf("\n DATA KENDARAAN TIDAK DITEMUKAN\n");
+						printf("\n\n\t ---< DATA KENDARAAN TIDAK DITEMUKAN >---\n\n");
 					}else{
 						view(y);
 						y++;
+						printf("\n\n\t ---< DATA KENDARAAN DITEMUKAN >---\n\n");
 					}
 					
 //					i=0;
@@ -430,7 +487,7 @@ int main() {
 					for(i=0;i<n;i++){
 						view(i);
 					}
-					
+					printf("\n\n\t ---< DATA BERHASIL DI-SORT >---\n\n");
 					getch();
 					system("cls");
 				}
@@ -442,7 +499,7 @@ int main() {
 					for(i=0;i<n;i++){
 						view (i);
 					}
-					
+					printf("\n\n\t ---< DATA BERHASIL DI-SORT >---\n\n");
 					getch();
 					system("cls");	
 				}
@@ -454,7 +511,7 @@ int main() {
 					for(i=0;i<n;i++){
 						view (i);
 					}
-					
+					printf("\n\n\t ---< DATA BERHASIL DI-SORT >---\n\n");
 					getch();
 					system("cls");
 					
@@ -467,7 +524,7 @@ int main() {
 					for(i=0;i<n;i++){
 						view(i);
 					}
-					
+					printf("\n\n\t ---< DATA BERHASIL DI-SORT >---\n\n");
 					getch();
 					system("cls");
 				}
@@ -479,7 +536,7 @@ int main() {
 					for(i=0;i<n;i++){
 						view(i);
 					}
-					
+					printf("\n\n\t ---< DATA BERHASIL DI-SORT >---\n\n");
 					getch();
 					system("cls");
 				}
@@ -491,7 +548,7 @@ int main() {
 					for(i=0;i<n;i++){
 						view(i);
 					}
-					
+					printf("\n\n\t ---< DATA BERHASIL DI-SORT >---\n\n");
 					getch();
 					system("cls");
 				}
