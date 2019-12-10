@@ -99,14 +99,28 @@ void pilihan_sort(){
 /*---INPUT USER------------------------------------------------------------------------------------------------------------------------------------------*/
 
 void input(int i){
-	printf(" Masukkan Nopol Kendaraan ke-%d		: ",i+1); fflush(stdin); gets(data[i].ken.nopol);
-	printf(" Masukkan Jenis Kendaraan ke-%d		: ",i+1); fflush(stdin); gets(data[i].ken.jenis);
-	printf(" Masukkan Bobot Kendaraan ke-%d		: ",i+1); fflush(stdin); scanf("%d",&data[i].ken.bobot);
-	printf(" Masukkan Tujuan Pelabuhan ke-%d		: ",i+1); fflush(stdin); gets(data[i].tujuan);
-	printf(" Masukkan Nomor Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].nomor_tiket);
-	printf(" Masukkan Tanggal Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.tanggal);
-	printf(" Masukkan Bulan Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.bulan);
-	printf(" Masukkan Tahun Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.tahun);
+	printf("\n Masukkan Nopol Kendaraan ke-%d			: ",i+1); fflush(stdin); gets(data[i].ken.nopol);	
+	printf("\n Masukkan Jenis Kendaraan ke-%d			: ",i+1); fflush(stdin); gets(data[i].ken.jenis);
+	printf("\n Masukkan Bobot Kendaraan ke-%d			: ",i+1); fflush(stdin); scanf("%d",&data[i].ken.bobot);
+	printf("\n _______________________________________");
+	printf("\n |\t == Tujuan yang tersedia ==\t|");
+	printf("\n |\t\t\t\t\t|");
+	printf("\n | -Ketapang \t -Padang Bai    \t|");
+	printf("\n | -Lembar \t -Tanjung Perak   \t|");
+	printf("\n |______________________________________|\n");
+	do{
+		printf(" \n Masukkan Tujuan Pelabuhan ke-%d			: ",i+1); fflush(stdin); gets(data[i].tujuan);	
+	}while(((strcmp(data[i].tujuan,("Ketapang"))&&strcmp(data[i].tujuan,("Padang Bai"))&&strcmp(data[i].tujuan,("Lembar"))&&strcmp(data[i].tujuan,("Tanjung Perak")))));
+	printf("\n Masukkan Nomor Tiket Kendaraan ke-%d		: ",i+1); fflush(stdin); scanf("%d",&data[i].nomor_tiket);
+	do{
+		printf("\n Masukkan Tanggal Tiket Kendaraan ke-%d		: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.tanggal);
+	}while(data[i].tgl.tanggal<1 || data[i].tgl.tanggal>31);
+	do{
+		printf("\n Masukkan Bulan[1-12] Tiket Kendaraan ke-%d	: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.bulan);
+	}while(data[i].tgl.bulan<1 || data[i].tgl.bulan>12);
+	do{
+		printf("\n Masukkan Tahun Tiket Kendaraan ke-%d		: ",i+1); fflush(stdin); scanf("%d",&data[i].tgl.tahun);	
+	}while(data[i].tgl.tahun<2018);
 }
 	
 void view(int i){
