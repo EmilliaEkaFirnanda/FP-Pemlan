@@ -69,21 +69,16 @@
 </p>
 <li> Pertama-tama adalah menentukan jarak mula-mula dari data yang akan dibandingkan, yaitu N/2. Data pertama dibandingkan dengan data dengan jarak N/2. Apabila data pertama lebih besar dari data ke N/2 tersebut maka kedua data tersebut ditukar. Kemudian data kedua dibandingkan dengan jarak yang sama yaitu N/2. Demikian seterusnya sampai seluruh data dibandingkan sehingga semua data ke-j selalu lebih kecil daripada data ke-(j+N/2). </li>
 <li> Ada proses berikutnya, digunakan jarak (N/2)/2 atau N/4. Data pertama dibandingkan dengan data dengan jarak N/4. Apabila data pertama lebih besar dari data ke N/4 tersebut maka kedua data tersebut ditukar. Kemudian data kedua dibandingkan dengan jarak yang sama yaitu N/4. Demikianlah seterusnya hingga seluruh data dibandingkan sehingga semua data ke-j lebih kecil daripada data ke-(j+N/4). </li>
-<li> ada proses berikutnya, digunakan jarak (N / 4) / 2 atau N / 8. Demikian seterusnya sampai jarak yang digunakan adalah 1. </li>
+<li> Ada proses berikutnya, digunakan jarak (N/4)/2 atau N/8. Demikian seterusnya sampai jarak yang digunakan adalah 1. </li>
 
-<p>
-	<li><center><h5>TERIMA KASIH SEMOGA BERMANFAAT :)</h5></center></li>
-	<li><center>Kelompok 9 : </center></li>
-	<li><center>Emillia Eka Firnanda [18081010026]</center></li>
-	<li><center>Rahmat Auliya [18081010027]</center></li>
-</p>
-<p><p>
-	<li><center>Paralel A</center></li>
-	<li><center>Program Studi Teknik Informatika</center></li>
-	<li><center>Fakultas Ilmu Komputer</center></li>
-	<li><center>UPN "Veteran" Jawa Timur</center></li>
-	<li><center>2019</center></li>
-</p>
+
+
+	Kelompok 9 : 
+	Emillia Eka Firnanda [18081010026]
+	Rahmat Auliya [18081010027]
+	
+	<h5>TERIMA KASIH SEMOGA BERMANFAAT :)</h5>
+
 
 
 
