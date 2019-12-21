@@ -15,35 +15,48 @@
     <li> Tanggal Tiket </li>
 <p><p></p>
 <p> Operasi yang dijalankan sebagai berikut;</p>
-<p> <li> Tambah data </li>
-    <li> Ubah data </li>
+<p>
     <table border="1">
     <tr>
+<td> Tambah Data </td>
+<td> Ubah Data </td>
     <td> Pencarian Data </td>
     <td> Pengurutan Data </td>
     </tr>
     <tr>
+	    	<td> Nomor Tiket </td>
+	        <td> Nomor Tiket </td>
     <td> Nomor Kendaraan </td>
     <td> Nomor Tiket </td>
     </tr>
     <tr>
+		<td> Nomor Kendaraan </td>
+	    	<td> Nomor Kendaraan </td>
     <td> Nomor Tiket </td>
     <td> Nomor Kendaraan </td>
     </tr>
     <tr>
+	    <td> Jenis Kendaraan </td>
+	    <td> Jenis Kendaraan </td>
     <td> Bobot Kendaraan </td>
     <td> Jenis Kendaraan </td>
     </tr>
     <tr>
     <td> </td>
+ 		<td> Bobot Kendaraan</td>
+	    	<td> Bobot Kendaraan</td>
     <td> Bobot Kendaraan</td>
     </tr>
     <tr>
     <td> </td>
+		<td> Tujuan Pelabuhan </td>
+	    	<td> Tujuan Pelabuhan </td>
     <td> Tujuan Pelabuhan </td>
     </tr>
     <tr>
     <td> </td>
+		<td> Tanggal Pemberangkatan </td>
+	    	<td> Tanggal Pemberangkatan </td>
     <td> Tanggal Pemberangkatan </td>
     </tr>
     </table>
