@@ -42,21 +42,18 @@
     <td> Jenis Kendaraan </td>
     </tr>
     <tr>
-    <td> </td>
  		<td> Bobot Kendaraan</td>
 	    	<td> Bobot Kendaraan</td>
 	    <td> - </td>
     <td> Bobot Kendaraan</td>
     </tr>
     <tr>
-    <td> </td>
 		<td> Tujuan Pelabuhan </td>
 	    	<td> Tujuan Pelabuhan </td>
 	     <td> - </td>
     <td> Tujuan Pelabuhan </td>
     </tr>
     <tr>
-    <td> </td>
 		<td> Tanggal Pemberangkatan </td>
 	    	<td> Tanggal Pemberangkatan </td>
 	     <td> - </td>
